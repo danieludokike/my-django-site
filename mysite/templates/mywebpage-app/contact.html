@@ -1,0 +1,27 @@
+{% extends "mywebpage-app/base.html" %}
+
+{% block title %} Contac Me Page {% endblock title %}
+
+
+{% block content %}
+
+    <h3>Contact Me!!</h3>
+    <ul>
+        {% for msg in messages %}
+
+            <li style="background-color: grey;">{{ msg }}</li>
+          
+        {% endfor %}
+    </ul>
+    <form action="" method="post">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+  
+{% endblock content %}
