@@ -30,6 +30,10 @@ def contact_me_page_view(request):
         subject = request.POST['subject']
         text = request.POST['text']
 
+        if text == '':
+            messages.info(request, 'Please send use a message')
+            return redirect('mywebpage:contact')
+
         user_passed_details = UserContactForm(
             full_name=full_name,
             email=email,

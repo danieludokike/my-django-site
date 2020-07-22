@@ -33,6 +33,7 @@ class ContactMeForm(forms.Form):
 	)
 
 	text = forms.CharField(
+		required=True,
 		widget=forms.Textarea(
 			attrs={
 				'placeholder': 'Leave Us a Message Here!!',
