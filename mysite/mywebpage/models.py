@@ -11,3 +11,14 @@ class UserContactForm(models.Model):
 
     def __str__(self):
         return self.full_name
+
+
+class PortfolioDetail(models.Model):
+    """All about the portfolio of mysite and the data it holds"""
+    course_name = models.CharField(max_length=250)
+    course_description = models.TextField()
+
+    def __str__(self):
+        return self.course_name
+
+
